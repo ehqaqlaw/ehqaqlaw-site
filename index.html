@@ -9,111 +9,30 @@
   <meta name="theme-color" content="#14222B">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <style>
-    :root{--navy:#14222B;--navy-2:#1B2D38;--ivory:#F6F2E9;--gold:#C4B48C;--gold-ink:#74612F;--on-navy:#C9D1D5;--on-navy-2:#A9B4BA;--line:rgba(196,180,140,.28)}
+    :root{--navy:#14222B;--ivory:#F6F2E9;--gold:#C4B48C;--on-navy:#C9D1D5;--on-navy-2:#A9B4BA}
     *{box-sizing:border-box}
     html,body{margin:0;min-height:100%}
     body{font-family:"IBM Plex Sans Arabic","Tajawal","SF Arabic","Segoe UI",Tahoma,sans-serif;background:var(--navy);color:var(--ivory);line-height:1.8;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
     main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 20px}
     .card{width:100%;max-width:520px;text-align:center}
-    .logo{width:auto;height:150px;display:block;margin:0 auto 22px}
-    h1{font-family:"Tajawal","IBM Plex Sans Arabic","SF Arabic","Segoe UI",Tahoma,sans-serif;font-weight:800;font-size:clamp(40px,8vw,56px);line-height:1.2;margin:0;color:var(--ivory);letter-spacing:-.5px}
-    .sub{margin:6px 0 0;font-size:clamp(16px,2.6vw,19px);color:var(--gold);font-weight:500}
-    .en{margin:10px 0 0;font-size:11px;letter-spacing:.24em;color:var(--on-navy-2);direction:ltr;unicode-bidi:isolate}
-    .rule{width:64px;height:1px;background:var(--gold);margin:28px auto;opacity:.8}
+    .logo{width:auto;height:clamp(170px,26vw,220px);display:block;margin:0 auto 28px}
+    .sub{margin:0;font-size:clamp(20px,3.4vw,26px);color:var(--gold);font-weight:500;line-height:1.5}
+    .en{margin:12px 0 0;font-size:12px;letter-spacing:.26em;color:var(--on-navy-2);direction:ltr;unicode-bidi:isolate}
+    .rule{width:64px;height:1px;background:var(--gold);margin:32px auto;opacity:.8}
     .msg{margin:0;font-size:clamp(16px,2.4vw,18px);color:var(--on-navy);font-weight:300}
-    .btn{display:inline-block;margin-top:30px;padding:13px 34px;border-radius:6px;border:1px solid var(--gold);background:var(--gold);color:var(--navy);font:inherit;font-weight:600;font-size:16px;cursor:pointer;transition:background .15s,color .15s}
-    .btn:hover{background:transparent;color:var(--gold)}
-    .btn:focus-visible,.field input:focus-visible,.btn-in:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-    .gate{display:none;margin-top:28px;padding:24px 22px;border:1px solid var(--line);border-radius:10px;background:var(--navy-2);text-align:right}
-    .gate.open{display:block}
-    .gate label{display:block;font-size:14px;color:var(--on-navy);margin-bottom:8px}
-    .row{display:flex;gap:10px}
-    .field{flex:1}
-    .field input{width:100%;padding:12px 14px;border-radius:6px;border:1px solid var(--line);background:var(--navy);color:var(--ivory);font:inherit;font-size:16px;direction:ltr;text-align:left}
-    .btn-in{padding:12px 22px;border-radius:6px;border:1px solid var(--gold);background:var(--gold);color:var(--navy);font:inherit;font-weight:600;font-size:15px;cursor:pointer;white-space:nowrap}
-    .btn-in[disabled]{opacity:.6;cursor:progress}
-    .err{margin:10px 0 0;font-size:14px;color:#E8B4A6;min-height:1.6em}
-    .hint{margin:12px 0 0;font-size:13px;color:var(--on-navy-2)}
     footer{padding:20px;text-align:center;font-size:13px;color:var(--on-navy-2)}
-    noscript p{margin-top:24px;color:#E8B4A6;font-size:14px}
-    @media (max-width:420px){.row{flex-direction:column}.btn-in{width:100%}}
   </style>
 </head>
 <body>
 <main>
   <div class="card">
-    <img class="logo" src="assets/img/logo-gold.png" alt="شعار إحقاق" width="66" height="150">
-    <h1>إحقاق</h1>
+    <img class="logo" src="assets/img/logo-gold.png" alt="شعار إحقاق" width="99" height="220">
     <p class="sub">للمحاماة والاستشارات القانونية</p>
     <p class="en">EHQAQ · LAW &amp; LEGAL CONSULTATIONS</p>
     <div class="rule" aria-hidden="true"></div>
     <p class="msg">موقعنا تحت الإنشاء، وسيُطلق قريباً.</p>
-
-    <button class="btn" id="open" type="button" aria-expanded="false" aria-controls="gate">دخول الأعضاء</button>
-
-    <form class="gate" id="gate" autocomplete="off" novalidate>
-      <label for="pw">كلمة المرور الخاصة بالأعضاء</label>
-      <div class="row">
-        <div class="field"><input id="pw" name="pw" type="password" inputmode="text" autocapitalize="off" spellcheck="false" aria-describedby="err" required></div>
-        <button class="btn-in" id="go" type="submit">دخول</button>
-      </div>
-      <p class="err" id="err" role="alert" aria-live="polite"></p>
-      <p class="hint">الدخول مخصص لأعضاء الشركة لمعاينة الموقع قبل إطلاقه.</p>
-    </form>
-    <noscript><p>يتطلب دخول الأعضاء تفعيل JavaScript في المتصفح.</p></noscript>
   </div>
 </main>
 <footer>© 2026 شركة إحقاق للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.</footer>
-
-<script>
-(function(){
-  var PREVIEW='https://ehqaqlaw.github.io/';
-  var SALT='54e5b1f25d70716777d3628c7219f739';
-  var ITER=200000;
-  var HASH='fad9d67085c84a92ea0a4da47b3995eb2dff70bdb8c7b199caec9a16dbe5899a';
-
-  var open=document.getElementById('open'), gate=document.getElementById('gate'),
-      pw=document.getElementById('pw'), go=document.getElementById('go'), err=document.getElementById('err');
-
-  open.addEventListener('click', function(){
-    var isOpen=gate.classList.toggle('open');
-    open.setAttribute('aria-expanded', isOpen?'true':'false');
-    if(isOpen){ pw.focus(); }
-  });
-
-  function hex(buf){ return Array.prototype.map.call(new Uint8Array(buf), function(b){ return ('0'+b.toString(16)).slice(-2); }).join(''); }
-  function bytes(h){ var a=new Uint8Array(h.length/2); for(var i=0;i<a.length;i++){ a[i]=parseInt(h.substr(i*2,2),16); } return a; }
-
-  async function derive(p){
-    var enc=new TextEncoder();
-    var key=await crypto.subtle.importKey('raw', enc.encode(p), 'PBKDF2', false, ['deriveBits']);
-    var bits=await crypto.subtle.deriveBits({name:'PBKDF2', salt:bytes(SALT), iterations:ITER, hash:'SHA-256'}, key, 256);
-    return hex(bits);
-  }
-  async function sha256(s){ return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s))); }
-
-  gate.addEventListener('submit', async function(e){
-    e.preventDefault();
-    err.textContent='';
-    var p=(pw.value||'').trim();
-    if(!p){ err.textContent='أدخل كلمة المرور.'; pw.focus(); return; }
-    if(!window.crypto || !crypto.subtle){ err.textContent='هذا المتصفح لا يدعم الدخول الآمن. استخدم متصفحاً حديثاً.'; return; }
-    go.disabled=true; go.textContent='جارٍ التحقق…';
-    try{
-      var k=await derive(p);
-      if(await sha256(k)===HASH){
-        go.textContent='تم، جارٍ التحويل…';
-        location.href=PREVIEW+'#k='+k;
-        return;
-      }
-      err.textContent='كلمة المرور غير صحيحة.';
-      pw.select();
-    }catch(ex){
-      err.textContent='تعذّر التحقق. أعد المحاولة.';
-    }
-    go.disabled=false; go.textContent='دخول';
-  });
-})();
-</script>
 </body>
 </html>
